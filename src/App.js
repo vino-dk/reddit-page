@@ -1,20 +1,24 @@
-import React, { Component, cloneElement } from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import data from './reactjs.json'
+import data from './Data';
+import Story from './components/Story';
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    //to initalise states
-  }
 
   componentDidMount(){
     // after initial render cycle, fetch data here.
   }
 
   render(){
+    console.log(data.data.children['0'].data.title);
     return (
-      <div>Say hello</div>
+      <div>
+        <Story 
+        title={data.data.children['0'].data.title}
+        score={data.data.children['0'].data.score}
+        url = {data.data.children['0'].data.url}
+        />
+      </div>
     );
   }
 }
