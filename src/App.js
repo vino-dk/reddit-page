@@ -17,6 +17,10 @@ class App extends Component {
         title={data.data.children['0'].data.title}
         score={data.data.children['0'].data.score}
         url = {data.data.children['0'].data.url}
+        thumbnail = {data.data.children['5'].data.thumbnail}
+        created = {data.data.children['0'].data.created_utc}
+        author = {data.data.children['0'].data.author_fullname}
+        num_comments = {data.data.children['0'].data.num_comments}
         />
       </div>
     );

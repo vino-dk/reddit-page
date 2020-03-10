@@ -12,7 +12,7 @@
 
 * App (contains state, AJAX, and is parent to the other components)
     * Maybe: Navbar (Sort in StoryList !! )
-    * StoryList (Renders the list of stories based on points - usually happens renderside.)
+    * StoryList (Renders the list of stories based on points - usually happens serverside.)
         * Story (Will include StoryTitle, TitleLink)
             * StoryTimestamp (based on data from API, Moment package to display x hours ago)
             * StoryAmountComments (props)
