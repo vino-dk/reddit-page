@@ -5,6 +5,9 @@ import moment from 'moment';
 // Describes content for a story card. Title, Link, Timestamp, 
 // ...amount of comments, Storypoints (state controlled), Storythumbnail.
 
+const FutureFeatures = () => {
+    return <div>share save hide report pocket</div>
+}
 
 const Story = (props) => {
     let no_comment = false;
@@ -27,8 +30,8 @@ const Story = (props) => {
                 <div>Submitted {moment.unix(props.created).format('LLL')} by {props.author}</div>
                 <div>
                     {no_comment
-                    ? <div>{props.num_comments} comments</div>
-                    : <div>comment</div>}
+                    ? <div>{props.num_comments} comments <FutureFeatures/></div>
+                    : <div>comment <FutureFeatures/></div>}
                 </div>
             </div>
         </div>
