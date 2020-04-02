@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import data from './Data';
-import Story from './components/Story';
+import StoryList from './components/StoryList';
 
 class App extends Component {
 
@@ -13,14 +13,8 @@ class App extends Component {
     console.log(data.data.children['0'].data.title);
     return (
       <div>
-        <Story 
-        title={data.data.children['0'].data.title}
-        score={data.data.children['0'].data.score}
-        url = {data.data.children['0'].data.url}
-        thumbnail = {data.data.children['5'].data.thumbnail}
-        created = {data.data.children['0'].data.created_utc}
-        author = {data.data.children['0'].data.author_fullname}
-        num_comments = {data.data.children['0'].data.num_comments}
+        <StoryList
+          stories={data.data.children}
         />
       </div>
     );

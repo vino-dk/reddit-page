@@ -9,9 +9,9 @@ const FutureFeatures = () => {
     return <div>share save hide report pocket</div>
 }
 
-const Story = (props) => {
+const Story = ({story}) => {
     let no_comment = false;
-    if (props.num_comments > 0) {
+    if (story.num_comments > 0) {
         no_comment = true;
     }
     else {
@@ -21,16 +21,16 @@ const Story = (props) => {
     return (
         <div className="story-container">
             <div className="left-part">
-                <div className="story-score" >{props.score}</div>
-                <img className="thumbnail" src={props.thumbnail} alt={props.thumbnail} />
+                <div className="story-score" >{story.score}</div>
+                <img className="thumbnail" src={story.thumbnail} alt={story.thumbnail} />
             </div>
             <div className="right-part">
-                <h1>{props.title}</h1>
-                <div>{props.url}</div>
-                <div>Submitted {moment.unix(props.created).format('LLL')} by {props.author}</div>
+            <h1>{story.title}</h1>
+                <div>{story.url}</div>
+                <div>Submitted {moment.unix(story.created).format('LLL')} by {story.author}</div>
                 <div>
                     {no_comment
-                    ? <div>{props.num_comments} comments <FutureFeatures/></div>
+                    ? <div>{story.num_comments} comments <FutureFeatures/></div>
                     : <div>comment <FutureFeatures/></div>}
                 </div>
             </div>
