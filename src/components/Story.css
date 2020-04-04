@@ -1,6 +1,5 @@
 .story-container {
     display: flex;
-    justify-content: space-between;
     border-bottom: 1px solid grey;
     padding: 10px;
 }
@@ -10,14 +9,18 @@
 }
 
 .right-part {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex: 9;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .story-score {
     align-items: center;
     vertical-align: middle; 
+}
+
+.story-url {
+    flex-wrap: wrap;
 }
 
 .thumbnail {

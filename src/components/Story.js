@@ -25,8 +25,8 @@ const Story = ({story}) => {
                 <img className="thumbnail" src={story.thumbnail} alt={story.thumbnail} />
             </div>
             <div className="right-part">
-            <h1>{story.title}</h1>
-                <div>{story.url}</div>
+                <h1>{story.title}</h1>
+                <div className="story-url">{story.url}</div>
                 <div>Submitted {moment.unix(story.created).format('LLL')} by {story.author}</div>
                 <div>
                     {no_comment
