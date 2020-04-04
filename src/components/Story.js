@@ -22,7 +22,7 @@ const Story = ({story}) => {
         <div className="story-container">
             <div className="left-part">
                 <div className="story-score" >{story.score}</div>
-                <img className="thumbnail" src={story.thumbnail} alt={story.thumbnail} />
+                <img className="thumbnail" src={story.thumbnail} alt={story.thumbnail} onError={() => story.src = 'src/testimg.png'} />
             </div>
             <div className="right-part">
                 <h1>{story.title}</h1>

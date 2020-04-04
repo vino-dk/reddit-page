@@ -1,34 +1,42 @@
 .story-container {
     display: flex;
-    border-bottom: 1px solid grey;
-    padding: 10px;
+    border: 1px solid grey;
+    padding: 0.5em;
+    padding-right: 0.8em;
+    border-radius: 0.8em;
+    margin-top: 1em;
+    margin-right: 1em;
 }
 
 .left-part {
+    display:flex;
     flex: 1;
+    margin-top: 30px;
 }
 
 .right-part {
     flex: 9;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding-bottom: 1em;
+    margin-left: 2em;
+    text-overflow: ellipsis;
 }
 
 .story-score {
-    align-items: center;
-    vertical-align: middle; 
-}
-
-.story-url {
-    flex-wrap: wrap;
+    margin: 2em;
 }
 
 .thumbnail {
     width: 64px;
     height: 64px;
     border: 1px solid #ccc;
-    margin-right: 10px;
-    float: left;
+    
+    
+}
+
+.story-url {
+    flex-wrap: wrap;
 }
 
 
